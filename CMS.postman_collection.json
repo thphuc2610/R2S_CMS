@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "85ac142a-1c33-4d56-accd-ea7a67074f63",
+		"name": "CMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31985225"
+	},
+	"item": [
+		{
+			"name": "Member",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"phucho\",\r\n    \"password\": \"123abc.phucho\",\r\n    \"firstName\": \"Ho Thanh\",\r\n    \"lastName\": \"Phuc\",\r\n    \"email\": \"phucho123@gmail.com\",\r\n    \"phone\": \"1234567890\",\r\n    \"description\": \"Thich choi bong da, bong chuyen,...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/vs1/member",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vs1",
+								"member"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get member",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwaHVjIiwiaWF0IjoxNzE2OTkxMzE4LCJleHAiOjE3MTY5OTMxMTh9.Q7b0_gGOmvo7N0ZPNvMhmUh01_LHD8HdunaAqI2CQTw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/vs1/member",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vs1",
+								"member"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"phuc\",\r\n    \"password\": \"123abc.phuc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/vs1/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vs1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwaHVjIiwiaWF0IjoxNzE2OTkxOTQ0LCJleHAiOjE3MTY5OTM3NDR9.8GGwqsUis-Y_fbgyliqJvrWfpzhu_G1zsjnYQaNCHAc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/vs1/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vs1",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Content",
+			"item": [
+				{
+					"name": "Content",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwaHVjIiwiaWF0IjoxNzE2OTkyMzA4LCJleHAiOjE3MTY5OTQxMDh9.cQpQu0TwUgCSWC1DWzaycZ1xdHtR2BBywWFLewgqgkg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"7 Vien Ngoc Rong Sieu Cap\",\r\n    \"brief\": \"Brief description of the content\",\r\n    \"content\": \"SonGoKu\",\r\n    \"createDate\": \"2024-05-29T20:40:30\",\r\n    \"updateTime\": \"2024-05-29T20:40:30\",\r\n    \"sort\": \"Sort details\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/vs1/content",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vs1",
+								"content"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Content",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwaHVjIiwiaWF0IjoxNzE2OTkyMzA4LCJleHAiOjE3MTY5OTQxMDh9.cQpQu0TwUgCSWC1DWzaycZ1xdHtR2BBywWFLewgqgkg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/vs1/content/paginate/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vs1",
+								"content",
+								"paginate",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwaHVjIiwiaWF0IjoxNzE2OTkyNjgyLCJleHAiOjE3MTY5OTQ0ODJ9.LBhFoyUb_U4upZst44Tc06RFGO_x-WveP4ZBFCPw4Zg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/vs1/content/1/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vs1",
+								"content",
+								"1",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwaHVjIiwiaWF0IjoxNzE2OTkyODUyLCJleHAiOjE3MTY5OTQ2NTJ9.bfSHTV8z5lQhM91rE_oBeAcgaOYWamkyUsrYW3fIweY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"7 Vien Ngoc Rong Sieu Cap\",\r\n  \"brief\": \"Anime\",\r\n  \"content\": \"Cuoc tranh dau giua cac vu tru\",\r\n  \"updateTime\": \"\",\r\n  \"sort\": \"da\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/vs1/content/1/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vs1",
+								"content",
+								"1",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwaHVjIiwiaWF0IjoxNzE2OTkyODUyLCJleHAiOjE3MTY5OTQ2NTJ9.bfSHTV8z5lQhM91rE_oBeAcgaOYWamkyUsrYW3fIweY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/vs1/content/1/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vs1",
+								"content",
+								"1",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
